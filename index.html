@@ -1,0 +1,1139 @@
+<!DOCTYPE html>
+<html class="noIE" lang="en-US">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no"/>
+    <title>STAR Travel</title>
+    <link rel="icon" href="assets/images/star-travel-logo.png">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/ionicons.min.css" />
+    <link rel="stylesheet" href="assets/css/owl.carousel.css" />
+    <link rel="stylesheet" href="assets/css/owl.theme.css" />
+    <link rel="stylesheet" href="assets/css/flexslider.css" type="text/css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <script src="assets/js/searchBus.js"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button
+            type="button"
+            class="navbar-toggle collapsed"
+            data-toggle="collapse"
+            data-target="#bs-example-navbar-collapse-1"
+            aria-expanded="false"
+          >
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html" title="HOME"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="25"
+              height="25"
+              fill="currentColor"
+              class="bi bi-star"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"
+              />
+            </svg>
+            Star <span>travel</span></a
+          >
+        </div>
+        <!-- /.navbar-header -->
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a href="index.html">Home</a></li>
+            <li><a href="about.html">about</a></li>
+            <li><a href="services.html">services</a></li>
+            <li><a href="contact.html">contact</a></li>
+          </ul>
+          <!-- /.nav -->
+        </div>
+        <!-- /.navbar-collapse -->
+      </div>
+      <!-- /.container -->
+    </nav>
+
+    <!-- Home -->
+    <div id="header">
+      <div class="flexslider">
+        <ul class="slides">
+          <li
+            class="slider-item"
+            style="background-image: url('assets/images/item-1.png')"
+          >
+            <div class="intro container">
+              <div class="inner-intro">
+                <h1 class="header-title">
+                  <span>traveling</span> always "good idea"
+                </h1>
+                <p class="header-sub-title">
+                  it leaves you speecless, then turns your into a storyteller.
+                </p>
+                <button class="btn custom-btn">book now</button>
+              </div>
+            </div>
+          </li>
+          <!-- /.slider-item -->
+          <li
+            class="slider-item"
+            style="background-image: url('assets/images/item-2.png')"
+          >
+            <div class="intro">
+              <div class="inner-intro">
+                <h1 class="header-title">
+                  to <span>travel</span> is to <span>live</span>
+                </h1>
+                <p class="header-sub-title">
+                  it leaves you speecless, then turns your into a storyteller.
+                </p>
+                <button class="btn custom-btn">book now</button>
+              </div>
+            </div>
+          </li>
+          <!-- /.slider-item -->
+        </ul>
+        <!-- /.slides -->
+      </div>
+      <!-- /.flexslider -->
+    </div>
+    <!-- /#header -->
+    <!-- Find a Tour -->
+
+    <section class="tour section-wrapper container">
+      <h2 class="section-title">Find a Tour</h2>
+      <p class="section-subtitle">Where would you like to go?</p>
+      <div class="row">
+        <div class="col-sm-6 col-md-6 col-lg-3 col-xs-12">
+          <div class="input-group">
+            <input
+              type="text"
+              onchange="validateSearch()"
+              class="form-control border-radius border-right text-uppercase"
+              placeholder="FROM"
+              id="from_location"
+            />
+            <span class="input-group-addon border-radius custom-addon">
+              <i class="ion-ios-calendar"></i>
+            </span>
+          </div>
+          <span class="error" id="errorFromLocation"></span>
+        </div>
+
+        <div class="col-sm-6 col-md-6 col-lg-3 col-xs-12">
+          <div class="input-group">
+            <input
+              type="text"
+              onchange="validateSearch()"
+              class="form-control border-radius border-right text-uppercase"
+              placeholder="TO"
+              id="to_location"
+            />
+            <span class="input-group-addon border-radius custom-addon">
+              <i class="ion-ios-calendar"></i>
+            </span>
+          </div>
+          <span class="error" id="errorToLocation"></span>
+        </div>
+
+        <div
+          class="col-sm-6 col-md-6 col-lg-3 col-xs-12"
+          style="margin-bottom: 22px"
+        >
+          <div class="input-group" style="display: inline !important">
+            <input
+              type="date"
+              onchange="validateSearch()"
+              class="form-control border-radius border-right"
+              placeholder="DEPARTURE DATE"
+              style="border-right: 1px solid #60c9eb; margin-bottom: 22px;"
+              id="departure_date"
+            />
+            <!-- <span class="input-group-addon border-radius custom-addon">
+              <i class="ion-ios-calendar"></i>
+            </span> -->
+          </div>
+          <span class="error" id="errorDepartureDate"></span>
+        </div>
+
+        <div class="col-sm-6 col-md-6 col-lg-3 col-xs-12">
+          <div
+            class="btn btn-default border-radius custom-button"
+            onclick="search();"
+          >
+            Search
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /.tour -->
+
+    <!-- bus result -->
+    <section class="section-wrapper container" id="buss-details">
+      <section class="row">
+        <section class="col-md-6" style="margin-bottom: 25px;">
+          <section
+            class="card"
+            type="button"
+            data-toggle="modal"
+            data-target="#seatSelectionModal"
+          >
+            <section class="card-body">
+              <section class="card-header-info">
+                <h4 class="card-title">Travel Agency Name 1</h4>
+                <p>25 Feb 2023</p>
+              </section>
+              <section class="card-header-info">
+                <p>Bharat Benz A/C Seater /Sleeper (3+3)</p>
+                <p>Rs. 1500/-</p>
+              </section>
+              <section class="card-header-info">
+                <p>Boarding Place (19:55)</p>
+                <p>02h 00m</p>
+                <p>Destination Place (21:55)</p>
+              </section>
+            </section>
+          </section>
+        </section>
+        <section class="col-md-6" style="margin-bottom: 25px;">
+          <section
+            class="card"
+            type="button"
+            data-toggle="modal"
+            data-target="#seatSelectionModal"
+          >
+          <section class="card-body">
+            <section class="card-header-info">
+              <h4 class="card-title">Travel Agency Name 2</h4>
+              <p>25 Feb 2023</p>
+            </section>
+            <section class="card-header-info">
+              <p>Volvo A/C Seater /Sleeper (3+3)</p>
+              <p>Rs. 2500/-</p>
+            </section>
+            <section class="card-header-info">
+              <p>Boarding Place (11:00)</p>
+              <p>06h 40 m</p>
+              <p>Destination Place (17:40)</p>
+            </section>
+          </section>
+          </section>
+        </section>
+      </section>
+    </section>
+
+    <!-- The modal for seat selection -->
+    <div class="modal fade" id="seatSelectionModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title text-info">Please select your seats</h4>
+          </div>
+          <div class="modal-body">
+            <div class="cabin-design">
+              <form id="seatSelectionModalForm">
+                <ol>
+                  <li class="cabi-row cabi-row-1">
+                    <ol class="seats" type="A">
+                      <li class="seat">
+                        <input type="checkbox" id="1A" />
+                        <label for="1A">1A</label>
+                      </li>
+                      <li class="seat">
+                        <input type="checkbox" id="1B" />
+                        <label for="1B">1B</label>
+                      </li>
+                      <li class="seat">
+                        <input type="checkbox" id="1C" />
+                        <label for="1C">1C</label>
+                      </li>
+                      <li class="seat">
+                        <input type="checkbox" id="1D" />
+                        <label for="1D">1D</label>
+                      </li>
+                      <li class="seat">
+                        <input type="checkbox" id="1E" />
+                        <label for="1E">1E</label>
+                      </li>
+                      <li class="seat">
+                        <input type="checkbox" id="1F" />
+                        <label for="1F">1F</label>
+                      </li>
+                    </ol>
+                  </li>
+                  <li class="cabi-row cabi-row-2">
+                    <ol class="seats" type="A">
+                      <li class="seat">
+                        <input type="checkbox" id="2A" />
+                        <label for="2A">2A</label>
+                      </li>
+                      <li class="seat">
+                        <input type="checkbox" id="2B" />
+                        <label for="2B">2B</label>
+                      </li>
+                      <li class="seat">
+                        <input type="checkbox" id="2C" />
+                        <label for="2C">2C</label>
+                      </li>
+                      <li class="seat">
+                        <input type="checkbox" id="2D" />
+                        <label for="2D">2D</label>
+                      </li>
+                      <li class="seat">
+                        <input type="checkbox" id="2E" />
+                        <label for="2E">2E</label>
+                      </li>
+                      <li class="seat">
+                        <input type="checkbox" id="2F" />
+                        <label for="2F">2F</label>
+                      </li>
+                    </ol>
+                  </li>
+                  <li class="cabi-row cabi-row-3">
+                    <ol class="seats" type="A">
+                      <li class="seat">
+                        <input type="checkbox" id="3A" />
+                        <label for="3A">3A</label>
+                      </li>
+                      <li class="seat">
+                        <input type="checkbox" id="3B" />
+                        <label for="3B">3B</label>
+                      </li>
+                      <li class="seat">
+                        <input type="checkbox" id="3C" />
+                        <label for="3C">3C</label>
+                      </li>
+                      <li class="seat">
+                        <input type="checkbox" id="3D" />
+                        <label for="3D">3D</label>
+                      </li>
+                      <li class="seat">
+                        <input type="checkbox" id="3E" />
+                        <label for="3E">3E</label>
+                      </li>
+                      <li class="seat">
+                        <input type="checkbox" id="3F" />
+                        <label for="3F">3F</label>
+                      </li>
+                    </ol>
+                  </li>
+                  <li class="cabi-row cabi-row-4">
+                    <ol class="seats" type="A">
+                      <li class="seat">
+                        <input type="checkbox" id="4A" />
+                        <label for="4A">4A</label>
+                      </li>
+                      <li class="seat">
+                        <input type="checkbox" id="4B" />
+                        <label for="4B">4B</label>
+                      </li>
+                      <li class="seat">
+                        <input type="checkbox" id="4C" />
+                        <label for="4C">4C</label>
+                      </li>
+                      <li class="seat">
+                        <input type="checkbox" id="4D" />
+                        <label for="4D">4D</label>
+                      </li>
+                      <li class="seat">
+                        <input type="checkbox" id="4E" />
+                        <label for="4E">4E</label>
+                      </li>
+                      <li class="seat">
+                        <input type="checkbox" id="4F" />
+                        <label for="4F">4F</label>
+                      </li>
+                    </ol>
+                  </li>
+                  <li class="cabi-row cabi-row-5">
+                    <ol class="seats" type="A">
+                      <li class="seat">
+                        <input type="checkbox" id="5A" />
+                        <label for="5A">5A</label>
+                      </li>
+                      <li class="seat">
+                        <input type="checkbox" id="5B" />
+                        <label for="5B">5B</label>
+                      </li>
+                      <li class="seat">
+                        <input type="checkbox" id="5C" />
+                        <label for="5C">5C</label>
+                      </li>
+                      <li class="seat">
+                        <input type="checkbox" id="5D" />
+                        <label for="5D">5D</label>
+                      </li>
+                      <li class="seat">
+                        <input type="checkbox" id="5E" />
+                        <label for="5E">5E</label>
+                      </li>
+                      <li class="seat">
+                        <input type="checkbox" id="5F" />
+                        <label for="5F">5F</label>
+                      </li>
+                    </ol>
+                  </li>
+                  <li class="cabi-row cabi-row-6">
+                    <ol class="seats" type="A">
+                      <li class="seat">
+                        <input type="checkbox" id="6A" />
+                        <label for="6A">6A</label>
+                      </li>
+                      <li class="seat">
+                        <input type="checkbox" id="6B" />
+                        <label for="6B">6B</label>
+                      </li>
+                      <li class="seat">
+                        <input type="checkbox" id="6C" />
+                        <label for="6C">6C</label>
+                      </li>
+                      <li class="seat">
+                        <input type="checkbox" id="6D" />
+                        <label for="6D">6D</label>
+                      </li>
+                      <li class="seat">
+                        <input type="checkbox" id="6E" />
+                        <label for="6E">6E</label>
+                      </li>
+                      <li class="seat">
+                        <input type="checkbox" id="6F" />
+                        <label for="6F">6F</label>
+                      </li>
+                    </ol>
+                  </li>
+                  <li class="cabi-row cabi-row-7">
+                    <ol class="seats" type="A">
+                      <li class="seat">
+                        <input type="checkbox" id="7A" />
+                        <label for="7A">7A</label>
+                      </li>
+                      <li class="seat">
+                        <input type="checkbox" id="7B" />
+                        <label for="7B">7B</label>
+                      </li>
+                      <li class="seat">
+                        <input type="checkbox" id="7C" />
+                        <label for="7C">7C</label>
+                      </li>
+                      <li class="seat">
+                        <input type="checkbox" id="7D" />
+                        <label for="7D">7D</label>
+                      </li>
+                      <li class="seat">
+                        <input type="checkbox" id="7E" />
+                        <label for="7E">7E</label>
+                      </li>
+                      <li class="seat">
+                        <input type="checkbox" id="7F" />
+                        <label for="7F">7F</label>
+                      </li>
+                    </ol>
+                  </li>
+                  <li class="cabi-row cabi-row-8">
+                    <ol class="seats" type="A">
+                      <li class="seat">
+                        <input type="checkbox" id="8A" />
+                        <label for="8A">8A</label>
+                      </li>
+                      <li class="seat">
+                        <input type="checkbox" id="8B" />
+                        <label for="8B">8B</label>
+                      </li>
+                      <li class="seat">
+                        <input type="checkbox" id="8C" />
+                        <label for="8C">8C</label>
+                      </li>
+                      <li class="seat">
+                        <input type="checkbox" id="8D" />
+                        <label for="8D">8D</label>
+                      </li>
+                      <li class="seat">
+                        <input type="checkbox" id="8E" />
+                        <label for="8E">8E</label>
+                      </li>
+                      <li class="seat">
+                        <input type="checkbox" id="8F" />
+                        <label for="8F">8F</label>
+                      </li>
+                    </ol>
+                  </li>
+                  <li class="cabi-row cabi-row-9">
+                    <ol class="seats" type="A">
+                      <li class="seat">
+                        <input type="checkbox" id="9A" />
+                        <label for="9A">9A</label>
+                      </li>
+                      <li class="seat">
+                        <input type="checkbox" id="9B" />
+                        <label for="9B">9B</label>
+                      </li>
+                      <li class="seat">
+                        <input type="checkbox" id="9C" />
+                        <label for="9C">9C</label>
+                      </li>
+                      <li class="seat">
+                        <input type="checkbox" id="9D" />
+                        <label for="9D">9D</label>
+                      </li>
+                      <li class="seat">
+                        <input type="checkbox" id="9E" />
+                        <label for="9E">9E</label>
+                      </li>
+                      <li class="seat">
+                        <input type="checkbox" id="9F" />
+                        <label for="9F">9F</label>
+                      </li>
+                    </ol>
+                  </li>
+                  <li class="cabi-row cabi-row-10">
+                    <ol class="seats" type="A">
+                      <li class="seat">
+                        <input type="checkbox" id="10A" />
+                        <label for="10A">10A</label>
+                      </li>
+                      <li class="seat">
+                        <input type="checkbox" id="10B" />
+                        <label for="10B">10B</label>
+                      </li>
+                      <li class="seat">
+                        <input type="checkbox" id="10C" />
+                        <label for="10C">10C</label>
+                      </li>
+                      <li class="seat">
+                        <input type="checkbox" id="10D" />
+                        <label for="10D">10D</label>
+                      </li>
+                      <li class="seat">
+                        <input type="checkbox" id="10E" />
+                        <label for="10E">10E</label>
+                      </li>
+                      <li class="seat">
+                        <input type="checkbox" id="10F" />
+                        <label for="10F">10F</label>
+                      </li>
+                    </ol>
+                  </li>
+                </ol>
+              </form>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <!-- <button type="button" class="btn btn-info" data-dismiss="modal">
+              Close
+            </button> -->
+            <button
+              type="button"
+              class="btn btn-danger"
+              onclick="cancelSeatBooking();"
+            >
+              Cancel
+            </button>
+            <button
+              type="button"
+              class="btn btn-primary"
+              onclick="showTicketBookingModal();"
+            >
+              Next
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- The modal for seat selection -->
+    <div class="modal fade" id="showTicketBookingModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title text-info">
+              Please fill your personal details
+            </h4>
+          </div>
+          <div class="modal-body">
+            <form id="personalInformationForm">
+              <section class="row" style="margin-bottom: 25px;">
+                <section class="col-md-12">
+                  <section class="form-card">
+                    <section class="form-group">
+                      <label for="name">Name</label>
+                      <input class="form-control" type="text" id="name" />
+                    </section>
+                    <section class="form-check">
+                      <section class="row">
+                        <section class="col-md-6">
+                          <section class="form-group">
+                            <label for="gender">Gender</label>
+                          </section>
+                          <label class="form-check-label" for="gender1">
+                            <input class="form-check-input" type="radio" value="Male" name="gender" id="gender1" /> Male
+                          </label>&nbsp;&nbsp;
+                          <label class="form-check-label" for="gender2">
+                            <input class="form-check-input" type="radio" value="Female" name="gender" id="gender2" /> Female
+                          </label>&nbsp;&nbsp;
+                          <label class="form-check-label" for="gender3">
+                            <input class="form-check-input" type="radio" value="Other" name="gender" id="gender3" /> Other
+                          </label>
+                        </section>
+                        <section class="col-md-6">
+                          <section class="form-group">
+                            <label for="age">Age</label>
+                            <input class="form-control" type="number" id="age" />
+                          </section>
+                        </section>
+                      </section>
+                    </section>
+                  </section>
+                </section>
+              </section>
+              <section class="row">
+                <section class="col-md-12">
+                  <section class="form-card">
+                    <section class="form-group">
+                      <label>Contact Details</label>
+                      <p>Your ticket will be sent to below given details.</p>
+                    </section>
+                    <section class="form-group">
+                      <label for="email">Email ID</label>
+                      <input class="form-control" type="email" id="email" />
+                    </section>
+                    <section class="form-group">
+                      <label for="number">Phone</label>
+                      <input class="form-control" type="number" id="number" />
+                    </section>
+                  </section>
+                </section>
+              </section>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-primary"
+              onclick="goBacToSeatBookingModal();"
+            >
+              Back
+            </button>
+            <button
+              type="button"
+              class="btn btn-danger"
+              onclick="cancelTicketBooking();"
+            >
+              Cancel
+            </button>
+            <button
+              type="button"
+              class="btn btn-success"
+              onclick="alert('This feature is under development!');"
+            >
+              Book
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function cancelSeatBooking() {
+        document.getElementById("seatSelectionModalForm").reset();
+        $("#seatSelectionModal").modal("hide");
+        $("#seatSelectionModal").hide();
+      }
+
+      function showTicketBookingModal() {
+        $("#seatSelectionModal").modal("hide");
+        $("#seatSelectionModal").hide();
+        $("#showTicketBookingModal").modal("show");
+        $("#showTicketBookingModal").show();
+      }
+
+      function cancelTicketBooking() {
+        document.getElementById("seatSelectionModalForm").reset();
+        document.getElementById("personalInformationForm").reset();
+        $("#showTicketBookingModal").modal("hide");
+        $("#showTicketBookingModal").hide();
+      }
+
+      function goBacToSeatBookingModal() {
+        $("#seatSelectionModal").modal("show");
+        $("#seatSelectionModal").show();
+        $("#showTicketBookingModal").modal("hide");
+        $("#hideTicketBookingModal").show();
+      }
+    </script>
+
+    <!-- Our Blazzing offers -->
+    <section class="offer section-wrapper">
+      <div class="container">
+        <h2 class="section-title">Our Blazzing offers</h2>
+        <p class="section-subtitle">
+          Lorem Ipsum is simply dummy text of the industry.
+        </p>
+        <div class="row">
+          <div class="col-sm-6 col-md-6 col-lg-3 col-xs-12">
+            <div class="offer-item">
+              <div class="icon">
+                <i class="ion-social-euro"></i>
+              </div>
+              <h3>Affordable Pricing</h3>
+              <p>
+                Class aptent taciti sociosutn tora torquent conub nost reptos
+                himenaeos.
+              </p>
+            </div>
+          </div>
+          <!-- /.col-md-3 -->
+
+          <div class="col-sm-6 col-md-6 col-lg-3 col-xs-12">
+            <div class="offer-item">
+              <div class="icon">
+                <i class="ion-ios-home"></i>
+              </div>
+              <h3>High class Hotels</h3>
+              <p>
+                Class aptent taciti sociosutn tora torquent conub nost reptos
+                himenaeos.
+              </p>
+            </div>
+          </div>
+          <!-- /.col-md-3 -->
+
+          <div class="col-sm-6 col-md-6 col-lg-3 col-xs-12">
+            <div class="offer-item">
+              <div class="icon">
+                <i class="ion-android-bus"></i>
+              </div>
+              <h3>Luxury Transport</h3>
+              <p>
+                Class aptent taciti sociosutn tora torquent conub nost reptos
+                himenaeos.
+              </p>
+            </div>
+          </div>
+          <!-- /.col-md-3 -->
+
+          <div class="col-sm-6 col-md-6 col-lg-3 col-xs-12">
+            <div class="offer-item">
+              <div class="icon">
+                <i class="ion-ios-locked"></i>
+              </div>
+              <h3>Highest Security</h3>
+              <p>
+                Class aptent taciti sociosutn tora torquent conub nost reptos
+                himenaeos.
+              </p>
+            </div>
+          </div>
+          <!-- /.col-md-3 -->
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /.container -->
+    </section>
+    <!-- /.offer -->
+
+    <!-- Top place to visit -->
+    <section class="visit section-wrapper">
+      <div class="container">
+        <h2 class="section-title">Top place to visit</h2>
+        <p class="section-subtitle">
+          Lorem Ipsum is simply dummy text of the industry.
+        </p>
+
+        <div class="owl-carousel visit-carousel" id="">
+          <div class="item">
+            <img
+              src="assets/images/visit-1.png"
+              alt="visit-image"
+              class="img-responsive visit-item"
+            />
+          </div>
+          <div class="item">
+            <img
+              src="assets/images/visit-2.png"
+              alt="visit-image"
+              class="img-responsive visit-item"
+            />
+          </div>
+          <div class="item">
+            <img
+              src="assets/images/visit-3.png"
+              alt="visit-image"
+              class="img-responsive visit-item"
+            />
+          </div>
+          <div class="item">
+            <img
+              src="assets/images/visit-1.png"
+              alt="visit-image"
+              class="img-responsive visit-item"
+            />
+          </div>
+          <div class="item">
+            <img
+              src="assets/images/visit-2.png"
+              alt="visit-image"
+              class="img-responsive visit-item"
+            />
+          </div>
+          <div class="item">
+            <img
+              src="assets/images/visit-3.png"
+              alt="visit-image"
+              class="img-responsive visit-item"
+            />
+          </div>
+        </div>
+      </div>
+      <!-- /.container -->
+    </section>
+    <!-- /.visit -->
+
+    <div class="offer-cta">
+      <div class="container">
+        <div class="offering">
+          <div class="percent"><span>15%</span> off</div>
+          <div class="FTour">for <strong>Family Tour</strong></div>
+          <a class="btn btn-default price-btn" href="#"> see our price </a>
+        </div>
+        <!-- /.offering -->
+      </div>
+      <!-- /.container -->
+    </div>
+    <!-- /.offer-cta -->
+
+    <section class="additional-services section-wrapper">
+      <div class="container">
+        <h2 class="section-title">Additional services</h2>
+        <p class="section-subtitle">
+          Lorem Ipsum is simply dummy text of the industry.
+        </p>
+        <div class="row">
+          <div class="col-md-4 col-sm-6">
+            <div class="custom-table">
+              <img
+                src="assets/images/add-srvc-1.png"
+                alt=""
+                class="add-srvc-img"
+              />
+              <div class="add-srvc-detail">
+                <h4 class="add-srvc-heading">Photography</h4>
+                <p class="add-srvc">
+                  Etiam pharetra ut ante eget ehy efficitur. Nullam quis felis
+                  at nunc vehicula sollicitudin euliquam quis felis atblan dit.
+                </p>
+                <!--<a class="btn btn-default price-btn" href="#">
+								Coming Soon...
+							</a>-->
+              </div>
+              <!-- /.add-srvc-detail -->
+            </div>
+            <!-- /.custom-table -->
+          </div>
+          <!-- /.col-md-4 col-sm-6 -->
+
+          <div class="col-md-4 col-sm-6">
+            <div class="custom-table">
+              <img
+                src="assets/images/add-srvc-2.png"
+                alt=""
+                class="add-srvc-img"
+              />
+              <div class="add-srvc-detail">
+                <h4 class="add-srvc-heading">Cycling</h4>
+                <p class="add-srvc">
+                  Etiam pharetra ut ante eget ehy efficitur. Nullam quis felis
+                  at nunc vehicula sollicitudin euliquam quis felis atblan dit.
+                </p>
+              </div>
+              <!-- /.add-srvc-detail -->
+            </div>
+            <!-- /.custom-table -->
+          </div>
+          <!-- /.col-md-4 col-sm-6 -->
+
+          <div class="col-md-4 col-sm-6">
+            <div class="custom-table">
+              <img
+                src="assets/images/add-srvc-3.png"
+                alt=""
+                class="add-srvc-img"
+              />
+              <div class="add-srvc-detail">
+                <h4 class="add-srvc-heading">Waking</h4>
+                <p class="add-srvc">
+                  Etiam pharetra ut ante eget ehy efficitur. Nullam quis felis
+                  at nunc vehicula sollicitudin euliquam quis felis atblan dit.
+                </p>
+              </div>
+              <!-- /.add-srvc-detail -->
+            </div>
+            <!-- /.custom-table -->
+          </div>
+          <!-- /.col-md-4 col-sm-6 -->
+
+          <div class="col-md-4 col-sm-6">
+            <div class="custom-table">
+              <img
+                src="assets/images/add-srvc-4.png"
+                alt=""
+                class="add-srvc-img"
+              />
+              <div class="add-srvc-detail">
+                <h4 class="add-srvc-heading">Skiing</h4>
+                <p class="add-srvc">
+                  Etiam pharetra ut ante eget ehy efficitur. Nullam quis felis
+                  at nunc vehicula sollicitudin euliquam quis felis atblan dit.
+                </p>
+              </div>
+              <!-- /.add-srvc-detail -->
+            </div>
+            <!-- /.custom-table -->
+          </div>
+          <!-- /.col-md-4 col-sm-6 -->
+
+          <div class="col-md-4 col-sm-6">
+            <div class="custom-table">
+              <img
+                src="assets/images/add-srvc-5.png"
+                alt=""
+                class="add-srvc-img"
+              />
+              <div class="add-srvc-detail">
+                <h4 class="add-srvc-heading">Sea beach</h4>
+                <p class="add-srvc">
+                  Etiam pharetra ut ante eget ehy efficitur. Nullam quis felis
+                  at nunc vehicula sollicitudin euliquam quis felis atblan dit.
+                </p>
+              </div>
+              <!-- /.add-srvc-detail -->
+            </div>
+            <!-- /.custom-table -->
+          </div>
+          <!-- /.col-md-4 col-sm-6 -->
+
+          <div class="col-md-4 col-sm-6">
+            <div class="custom-table">
+              <img
+                src="assets/images/add-srvc-6.png"
+                alt=""
+                class="add-srvc-img"
+              />
+              <div class="add-srvc-detail">
+                <h4 class="add-srvc-heading">Hill tracking</h4>
+                <p class="add-srvc">
+                  Etiam pharetra ut ante eget ehy efficitur. Nullam quis felis
+                  at nunc vehicula sollicitudin euliquam quis felis atblan dit.
+                </p>
+              </div>
+              <!-- /.add-srvc-detail -->
+            </div>
+            <!-- /.custom-table -->
+          </div>
+          <!-- /.col-md-4 col-sm-6 -->
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /.container -->
+    </section>
+    <!-- /.Additional-services -->
+
+    <!--
+	<div class="section-wrapper sponsor">
+		
+		<div class="container">
+
+			<div class="owl-carousel sponsor-carousel">
+				<div class="item">
+					<a href="#">
+						<img src="assets/images/sp-1.png" alt="sponsor-brand" class="img-responsive sponsor-item">
+					</a>
+				</div>
+				<div class="item">
+					<a href="#">
+						<img src="assets/images/sp-2.png" alt="sponsor-brand" class="img-responsive sponsor-item">
+					</a>
+				</div>
+				<div class="item">
+					<a href="#">
+						<img src="assets/images/sp-3.png" alt="sponsor-brand" class="img-responsive sponsor-item">
+					</a>
+				</div>
+				<div class="item">
+					<a href="#">
+						<img src="assets/images/sp-4.png" alt="sponsor-brand" class="img-responsive sponsor-item">
+					</a>
+				</div>
+				<div class="item">
+					<a href="#">
+						<img src="assets/images/sp-5.png" alt="sponsor-brand" class="img-responsive sponsor-item">
+					</a>
+				</div>
+				<div class="item">
+					<a href="#">
+						<img src="assets/images/sp-6.png" alt="sponsor-brand" class="img-responsive sponsor-item">
+					</a>
+				</div>
+				<div class="item">
+					<a href="#">
+						<img src="assets/images/sp-1.png" alt="sponsor-brand" class="img-responsive sponsor-item">
+					</a>
+				</div>
+				<div class="item">
+					<a href="#">
+						<img src="assets/images/sp-2.png" alt="sponsor-brand" class="img-responsive sponsor-item">
+					</a>
+				</div>
+				<div class="item">
+					<a href="#">
+						<img src="assets/images/sp-3.png" alt="sponsor-brand" class="img-responsive sponsor-item">
+					</a>
+				</div>
+				<div class="item">
+					<a href="#">
+						<img src="assets/images/sp-4.png" alt="sponsor-brand" class="img-responsive sponsor-item">
+					</a>
+				</div>
+				<div class="item">
+					<a href="#">
+						<img src="assets/images/sp-5.png" alt="sponsor-brand" class="img-responsive sponsor-item">
+					</a>
+				</div>
+				<div class="item">
+					<a href="#">
+						<img src="assets/images/sp-6.png" alt="sponsor-brand" class="img-responsive sponsor-item">
+					</a>
+				</div>
+				<div class="item">
+					<a href="#">
+						<img src="assets/images/sp-1.png" alt="sponsor-brand" class="img-responsive sponsor-item">
+					</a>
+				</div>
+				<div class="item">
+					<a href="#">
+						<img src="assets/images/sp-2.png" alt="sponsor-brand" class="img-responsive sponsor-item">
+					</a>
+				</div>
+				<div class="item">
+					<a href="#">
+						<img src="assets/images/sp-3.png" alt="sponsor-brand" class="img-responsive sponsor-item">
+					</a>
+				</div>
+				<div class="item">
+					<a href="#">
+						<img src="assets/images/sp-4.png" alt="sponsor-brand" class="img-responsive sponsor-item">
+					</a>
+				</div>
+				<div class="item">
+					<a href="#">
+						<img src="assets/images/sp-5.png" alt="sponsor-brand" class="img-responsive sponsor-item">
+					</a>
+				</div>
+				<div class="item">
+					<a href="#">
+						<img src="assets/images/sp-6.png" alt="sponsor-brand" class="img-responsive sponsor-item">
+					</a>
+				</div>
+			</div> 
+		</div> 
+	</div>  -->
+
+    <div class="subscribe section-wrapper">
+      <a class="brand-logo" href="index.html" title="HOME"
+        ><svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="25"
+          height="25"
+          fill="currentColor"
+          class="bi bi-star"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"
+          />
+        </svg>
+        STAR <span>Travel</span></a
+      >
+      <p class="subscribe-now">Subscribe to our Newsletter</p>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 col-sm-6 col-md-offset-4 col-sm-offset-3">
+            <div class="input-group">
+              <input
+                type="email"
+                class="form-control border-radius"
+                placeholder="Email address"
+              />
+              <span class="input-group-btn">
+                <button
+                  class="btn btn-default border-radius custom-sub-btn"
+                  type="button"
+                >
+                  DONE
+                </button>
+              </span>
+            </div>
+            <!-- /input-group -->
+          </div>
+        </div>
+      </div>
+
+      <ul class="social-icon">
+        <li>
+          <a href="#"><i class="ion-social-twitter"></i></a>
+        </li>
+        <li>
+          <a href="#"><i class="ion-social-facebook"></i></a>
+        </li>
+        <li>
+          <a href="#"><i class="ion-social-linkedin-outline"></i></a>
+        </li>
+        <li>
+          <a href="#"><i class="ion-social-googleplus"></i></a>
+        </li>
+      </ul>
+    </div>
+    <!-- /.subscribe -->
+
+    <footer>
+      <div class="container">
+        <div class="row text-center">
+          <div class="col-sm-4 col-md-4 col-lg-4 col-xs-12">
+            <div class="">&copy; Copyright Star Travels</div>
+          </div>
+          <div class="col-sm-6 col-md-6 col-lg-4 col-xs-12">
+            Designed, Developed and Maintained by
+            <a href="#"
+              ><strong
+                ><span style="color: #1f1cdd">Jyothi Nelluri</span></strong
+              ></a
+            >
+          </div>
+          <div class="col-sm-1 col-md-1 col-lg-4 col-xs-12">
+            <div class="top">
+              <a href="#header">
+                <i class="ion-arrow-up-b"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="assets/js/jquery-1.11.2.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/contact.js"></script>
+    <script src="assets/js/jquery.flexslider.js"></script>
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
